@@ -1,0 +1,9 @@
+#Pycharm Files
+**/.idea/**/*
+*.pyc
+
+#Example outputs
+example/*/tb
+
+#Merging artifacts
+*.bak

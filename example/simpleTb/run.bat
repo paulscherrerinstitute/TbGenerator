@@ -1,0 +1,1 @@
+py ..\..\TbGen.py -src .\psi_common_async_fifo.vhd -dst .\tb -clear -force
