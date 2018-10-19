@@ -48,15 +48,20 @@ class TbGenGui(QDialog):
 
         self.setLayout(layout)
         self.show()
+        self.lastDirectory = "."
 
 
     def LoadSrc(self):
-        file = QFileDialog.getOpenFileName(parent=self, caption="Select Source File", filter="*.vhd")
-        self.srcLine.setText(file)
+        file = QFileDialog.getOpenFileName(parent=self, caption="Select Source File", directory=self.lastDirectory, filter="*.vhd")
+        if file != "":
+            self.srcLine.setText(file)
+            self.lastDirectory = self.lastDirectory = os.path.dirname(file) + "/.." #Go one directory up because TB and SRT are usually stored in different folders
 
     def LoadDst(self):
-        dir = QFileDialog.getExistingDirectory(parent=self, caption="Select Destination Directory")
-        self.dstLine.setText(dir)
+        dir = QFileDialog.getExistingDirectory(parent=self, caption="Select Destination Directory", directory=self.lastDirectory)
+        if dir != "":
+            self.dstLine.setText(dir)
+            self.lastDirectory = dir + "/.." #Go one directory up because TB and SRT are usually stored in different folders
 
     def Generate(self):
         try:
