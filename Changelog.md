@@ -1,3 +1,8 @@
+## 2.0.1
+
+* Bugfixes
+  * GUI does remember last path used now
+
 ## 2.0.0
 
 * First open-source release (older history discarded)
