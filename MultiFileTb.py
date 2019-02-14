@@ -4,7 +4,7 @@
 #  Authors: Oliver Bruendler
 ##############################################################################
 
-from PsiPyUtils.FileWriter import FileWriter
+from PsiPyUtils import FileWriter
 from DutInfo import DutInfo, Tags
 from TbInfo import TbInfo
 from UtilFunc import VhdlTitle, CopyrightNotice

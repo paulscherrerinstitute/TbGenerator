@@ -7,7 +7,7 @@
 from DutInfo import DutInfo, Tags
 from typing import List
 from VhdlParse import VhdlPortDeclaration
-from PsiPyUtils.FileWriter import FileWriter
+from PsiPyUtils import FileWriter
 
 class TbInfo:
 
