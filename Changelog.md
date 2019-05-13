@@ -1,3 +1,8 @@
+## 3.0.0
+
+* None reverse-compatible changes
+  * Change code to work with PsiPyUtils 3.0.0 (does not work with 2.x anymore)
+
 ## 2.0.1
 
 * Bugfixes

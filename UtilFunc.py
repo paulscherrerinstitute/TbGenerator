@@ -4,7 +4,7 @@
 #  Authors: Oliver Bruendler
 ##############################################################################
 
-from PsiPyUtils.FileWriter import FileWriter
+from PsiPyUtils import FileWriter
 from datetime import datetime as dt
 
 def VhdlTitle(title : str, f : FileWriter, level : int = 1) -> FileWriter:

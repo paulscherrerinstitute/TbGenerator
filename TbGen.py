@@ -12,7 +12,7 @@ if __name__ == "__main__":
     sys.path.append(myPath + "/../..")
 
 import os
-from PsiPyUtils.FileWriter import FileWriter
+from PsiPyUtils import FileWriter
 from UtilFunc import VhdlTitle, CopyrightNotice
 from MultiFileTb import WriteTbPkg, WriteCasePkg
 from DutInfo import DutInfo, Tags, UnknownVhdlType

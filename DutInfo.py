@@ -7,7 +7,7 @@
 from VhdlParse import VhdlFile, VhdlPortDeclaration
 import pyparsing as pp
 from typing import Iterable, List
-from PsiPyUtils.FileWriter import FileWriter
+from PsiPyUtils import FileWriter
 from UtilFunc import VhdlTitle
 
 class UnknownVhdlType(Exception): pass
