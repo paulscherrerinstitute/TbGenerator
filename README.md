@@ -38,7 +38,7 @@ The required folder structure looks as given below (folder names must be matched
 
 Alternatively the repository [psi\_fpga\_all](https://github.com/paulscherrerinstitute/psi_fpga_all) can be used. This repo contains all FPGA related repositories as submodules in the correct folder structure.
 * Python
-  * [PsiPyUtils](https://github.com/paulscherrerinstitute/PsiPyUtils) (2.0.0 or higher)
+  * [PsiPyUtils](https://github.com/paulscherrerinstitute/PsiPyUtils) (3.0.0 or higher)
   * [**TbGenerator**](https://github.com/paulscherrerinstitute/TbGenerator) 
 
 ## External
