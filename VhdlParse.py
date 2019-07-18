@@ -149,7 +149,7 @@ class VhdlPortDeclaration(VhdlConstruct):
 
 class VhdlEntityDeclaration(VhdlConstruct):
     PP_DEFINITION = pp.CaselessKeyword("entity") + PP_IDENTIFIER("name") + pp.CaselessKeyword("is") + \
-                    pp.Optional(pp.CaselessKeyword("generic") + "(" + pp.OneOrMore(VhdlGenericDeclaration.PP())("generics") + ")" + ";") + \
+                    pp.Optional(pp.CaselessKeyword("generic") + "(" + pp.OneOrMore(VhdlGenericDeclaration.PP() | pp.Suppress(PP_COMMENT))("generics") + ")" + ";") + \
                     pp.Optional(pp.CaselessKeyword("port") + "(" + pp.OneOrMore(VhdlPortDeclaration.PP()("port")|PP_COMMENT("comment"))("ports") + ")" + ";" + pp.Optional(PP_COMMENT)) + \
                     pp.CaselessKeyword("end") + pp.Optional(pp.CaselessKeyword("entity")) + pp.Optional(PP_IDENTIFIER) + ";"
 
