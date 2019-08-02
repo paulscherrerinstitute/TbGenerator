@@ -1,3 +1,8 @@
+## 3.0.1
+
+* Bugfixes
+  * Tolerate comment lines in generic declarations
+
 ## 3.0.0
 
 * None reverse-compatible changes
