@@ -72,7 +72,7 @@ class VhdlCommentLine(VhdlConstruct):
         self.comment = parts[0].get("text")
 
 class VhdlUseStatement(VhdlConstruct):
-    PP_DEFINITION = pp.Literal("use") + PP_IDENTIFIER("library") + pp.Literal(".") + PP_IDENTIFIER("element") + pp.Literal(".") + PP_IDENTIFIER("object")
+    PP_DEFINITION = pp.LineStart().leaveWhitespace() + pp.Literal("use") + PP_IDENTIFIER("library") + pp.Literal(".") + PP_IDENTIFIER("element") + pp.Literal(".") + PP_IDENTIFIER("object")
 
     def _Parse(self, parts : pp.ParseResults):
         self.library = parts.get("library")
