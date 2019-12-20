@@ -3,7 +3,7 @@
 ## Maintainer
 Daniel Llorente [daniel.llorente@psi.ch]
 
-## Author
+## Author and main contributor
 Oliver Bründler [oli.bruendler@gmx.ch]
 
 ## License
