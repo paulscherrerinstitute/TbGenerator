@@ -4,7 +4,8 @@
 #  Authors: Oliver Bruendler
 ##############################################################################
 
-from PyQt4.QtGui import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 import sys
 import os
 
