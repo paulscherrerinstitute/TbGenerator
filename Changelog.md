@@ -1,3 +1,8 @@
+## 3.0.2
+
+* Bugfixes
+  * Do not interpret commented library use-clauses
+
 ## 3.0.1
 
 * Bugfixes
