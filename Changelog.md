@@ -1,3 +1,11 @@
+## 3.0.4
+
+* Support for PyQt5
+
+PyQt4 is not anymore supported. For that reason, Oliver Bruendler has upgraded the TbGenerator to be compatible with PyQt5. Thanks for keeping the repository updated.
+Stable release.
+
+  
 ## 3.0.2
 
 * Bugfixes
