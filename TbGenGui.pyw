@@ -4,7 +4,8 @@
 #  Authors: Oliver Bruendler
 ##############################################################################
 
-from PyQt4.QtGui import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 import sys
 import os
 
@@ -52,7 +53,7 @@ class TbGenGui(QDialog):
 
 
     def LoadSrc(self):
-        file = QFileDialog.getOpenFileName(parent=self, caption="Select Source File", directory=self.lastDirectory, filter="*.vhd")
+        file = QFileDialog.getOpenFileName(parent=self, caption="Select Source File", directory=self.lastDirectory, filter="*.vhd")[0]
         if file != "":
             self.srcLine.setText(file)
             self.lastDirectory = self.lastDirectory = os.path.dirname(file) + "/.." #Go one directory up because TB and SRT are usually stored in different folders

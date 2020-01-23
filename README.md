@@ -47,5 +47,5 @@ Alternatively the repository [psi\_fpga\_all](https://github.com/paulscherrerins
 ## External
 
 * PIP
-  * PyQt4
+  * PyQt5
   * pyparsing
