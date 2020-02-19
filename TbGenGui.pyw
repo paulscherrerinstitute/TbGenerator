@@ -10,8 +10,8 @@ import sys
 import os
 
 if __name__ == "__main__":
-    myPath = os.path.realpath(__file__)
-    sys.path.append(myPath + "/../..")
+    myPath = os.path.realpath(os.path.dirname(__file__))
+    sys.path.append(myPath + "/..")
 from TbGen import TbGenerator
 
 class TbGenGui(QDialog):

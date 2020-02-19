@@ -7,9 +7,8 @@
 import os
 import sys
 if __name__ == "__main__":
-    myPath = os.path.realpath(__file__)
-    print(os.path.abspath(myPath + "/../.."))
-    sys.path.append(myPath + "/../..")
+    myPath = os.path.realpath(os.path.dirname(__file__))
+    sys.path.append(myPath + "/..")
 
 import os
 from PsiPyUtils import FileWriter
