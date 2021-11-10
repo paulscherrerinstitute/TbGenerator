@@ -99,7 +99,7 @@ class TbGenerator:
                     f.WriteLn("wait until NextCase = {};".format(i))
                     f.WriteLn("ProcessDone(TbProcNr_{}_c) <= '0';".format(p))
                     args = ", ".join(port.name for port in self.tbInfo.GetPortsForProcess(p))
-                    f.WriteLn("work.{tb}_case_{case}.{proc}({args}, Generics_c);".format(tb=self.tbInfo.tbName, case=c, proc=p, args=args))
+                    f.WriteLn("{lib}.{tb}_case_{case}.{proc}({args}, Generics_c);".format(lib=self.dutInfo.tbLibrary,tb=self.tbInfo.tbName, case=c, proc=p, args=args))
                     f.WriteLn("wait for 1 ps;")
                     f.WriteLn("ProcessDone(TbProcNr_{}_c) <= '1';".format(p))
             else:
