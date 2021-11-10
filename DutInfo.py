@@ -29,6 +29,7 @@ class Tags:
     PROCESSES = "processes"
     TESTCASES = "testcases"
     DUTLIB = "dutlib"
+    TBLIB = "tblib"
     TBPKG = "tbpkg"
 
 class DutInfo:
@@ -62,6 +63,13 @@ class DutInfo:
     def dutLibrary(self):
         if Tags.DUTLIB in self.fileScopeTags:
             return self.fileScopeTags[Tags.DUTLIB]
+        else:
+            return "work"
+
+    @property
+    def tbLibrary(self):
+        if Tags.TBLIB in self.fileScopeTags:
+            return self.fileScopeTags[Tags.TBLIB]
         else:
             return "work"
 

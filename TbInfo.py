@@ -55,13 +55,13 @@ class TbInfo:
             f.DecIndent().WriteLn()
 
     def TbPkgDeclaration(self, f : FileWriter) -> FileWriter:
-        f.WriteLn("library work;".format()).IncIndent()
-        f.WriteLn("use work.{}_pkg.all;".format(self.tbName))
+        f.WriteLn("library {};".format(self.dutInfo.tbLibrary)).IncIndent()
+        f.WriteLn("use {}.{}_pkg.all;".format(self.dutInfo.tbLibrary, self.tbName))
         f.DecIndent().WriteLn()
 
     def TbCaseDeclaration(self, f : FileWriter) -> FileWriter:
-        f.WriteLn("library work;".format()).IncIndent()
+        f.WriteLn("library {};".format(self.dutInfo.tbLibrary)).IncIndent()
         for c in self.testCases:
-            f.WriteLn("use work.{}_case_{}.all;".format(self.tbName, c))
+            f.WriteLn("use {}.{}_case_{}.all;".format(self.dutInfo.tbLibrary, self.tbName, c))
         f.DecIndent().WriteLn()
         return f
